@@ -11,7 +11,8 @@ event_path = os.getenv('GITHUB_EVENT_PATH')
 
 errors = []
 
-for filename in Path('.').rglob('*.json'):
+for file in Path('.').rglob('*.json'):
+    filename = str(file)
     validation_errors = validate_file(json_schema, json_path_pattern, filename)
 
     if len(validation_errors):
