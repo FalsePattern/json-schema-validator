@@ -11,7 +11,10 @@ on:
   pull_request:
     branches:
       - master
-name: Pull request workflow
+  push:
+    branches:
+      - master
+name: JSON validation workflow
 jobs:
   validate_configurations:
     name: Validate configurations
