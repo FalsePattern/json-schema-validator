@@ -20,4 +20,5 @@ def validate_file(json_schema, path_pattern, file_path):
         validator = Draft7Validator(schema)
         return sorted(validator.iter_errors(instance), key=str)
     else:
+        print('{} doesn\'t match pattern {}'.format(file_path, path_pattern))
         return []
