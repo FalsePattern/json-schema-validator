@@ -2,8 +2,7 @@ import json
 import os
 from pathlib import Path
 
-from utils import (json_from_file,
-                   request, validate_file)
+from utils import (json_from_file, validate_file)
 
 json_schema = os.getenv('INPUT_JSON_SCHEMA')
 json_path_pattern = os.getenv('INPUT_JSON_PATH_PATTERN')
